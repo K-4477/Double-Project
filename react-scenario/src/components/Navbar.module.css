@@ -1,0 +1,61 @@
+/* Navbar.module.css */
+
+/* Hamburger button style */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100vh;
+  background-color: #222;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+/* Sidebar visible */
+.open {
+  left: 0;
+}
+
+/* Link style */
+.link {
+  font-family:'Courier New', Courier, monospace;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease;
+}
+
+.link:hover {
+  background-color: #444;
+}
+
+/* Close button inside sidebar */
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

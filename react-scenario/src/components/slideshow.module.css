@@ -1,0 +1,16 @@
+.slideshowcontainer {
+  height: 75vh;
+  width: 28vw;
+}
+
+.slideshowcontainer img {
+  height: 75vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+
+.slideshowcontainer img:hover {
+  transform: scale(1.05);
+}
