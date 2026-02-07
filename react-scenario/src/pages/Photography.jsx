@@ -1,5 +1,6 @@
 import styles from './Photography.module.css';
 import Slideshow from '../components/slideshow.jsx';
+import MediaGallery from './MediaGallery';
 
 
 const Photography = () => {
@@ -13,6 +14,7 @@ const Photography = () => {
       </section>
 
       <div className = {styles.Slideshow}>
+        <MediaGallery />
         <Slideshow  />
       </div>
         
