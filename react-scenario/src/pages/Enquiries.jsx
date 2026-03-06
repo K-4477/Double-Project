@@ -1,4 +1,4 @@
-import styles from './Enquiries.module.css';
+import styles from '../css/Enquiries.module.css';
 
 const Enquiries = () => {
     return (

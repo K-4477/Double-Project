@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './hero.module.css';
+import styles from '../css/hero.module.css';
 import { Link } from 'react-router-dom';
 import camerahold from '/src/camerahold.jpg';
 import Videosun from '/src/Videosun.jpg'
@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div className={styles.hero}>
       <header className={styles.title}>
-        <h1 className={styles.headertitle}>Akash Shanghavi</h1>
+        <h1 className={styles.headertitle}>Media Portfolio</h1>
       </header>
 
       <section>

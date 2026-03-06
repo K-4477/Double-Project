@@ -1,16 +1,28 @@
 .slideshowcontainer {
-  height: 75vh;
-  width: 28vw;
+  width: 70vw;
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
 .slideshowcontainer img {
-  height: 75vh;
+  max-height: 75vh;
+  width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
+  object-fit: contain;
 }
-
 
 .slideshowcontainer img:hover {
   transform: scale(1.05);
+}
+
+.slidevideo {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 70vh;
+  display: block;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 8px;
 }

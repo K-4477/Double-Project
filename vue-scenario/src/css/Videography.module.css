@@ -1,0 +1,47 @@
+.vg{
+    background-color: #282c34;
+    text-align: center;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.Videography {
+  font-family: 'SackersGothicLight', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  font-weight: 10;
+  text-align: center;
+  background-color: #282c34;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #ffffff;
+  margin: auto;
+  
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top:100px;
+    width: 850px;
+    gap: 60px;
+}
+
+.playerbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  margin-top: 40px;
+}
+
+.videoplayer {
+  width: 70vw;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}

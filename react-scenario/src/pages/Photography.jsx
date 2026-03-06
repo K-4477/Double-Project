@@ -1,4 +1,4 @@
-import styles from './Photography.module.css';
+import styles from '../css/Photography.module.css';
 import Slideshow from '../components/slideshow.jsx';
 import MediaGallery from './MediaGallery';
 
@@ -14,8 +14,7 @@ const Photography = () => {
       </section>
 
       <div className = {styles.Slideshow}>
-        <MediaGallery />
-        <Slideshow  />
+        <Slideshow jsonPath="slideshow.json" type="image" />
       </div>
         
       <div className={styles.photogallery}>

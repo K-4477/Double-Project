@@ -1,6 +1,5 @@
-import './Videography.module.css';
-import styles from './Videography.module.css';
-import Testvideo from '/src/Testvideo.mp4';
+import styles from '../css/Videography.module.css';
+import Slideshow from '../components/slideshow';
 
 const Videography = () => {
     return(
@@ -12,9 +11,7 @@ const Videography = () => {
                 </p>
             </section>
         <div className={styles.playerbox}>
-            <video className={styles.videoplayer} controls>
-                <source src={Testvideo} type="video/mp4"/>
-            </video>
+            <Slideshow jsonPath="videos.json" type="video" />
         </div>
         
     </div>

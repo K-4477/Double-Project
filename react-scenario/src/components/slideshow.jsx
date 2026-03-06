@@ -1,37 +1,57 @@
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from './Slideshow.module.css';
 
-const Slideshow = () => {
-  const [imageLinks, setImageLinks] = useState([]);
+const BUCKET_URL = "https://k1958-project-media.s3.eu-north-1.amazonaws.com";
+
+const Slideshow = ({ jsonPath, type = 'image' }) => {
+  const [mediaLinks, setMediaLinks] = useState([]);
 
   useEffect(() => {
-  async function fetchImages() {
-    const res = await fetch('http://localhost:3001/api/slideshow-images');
-    const urls = await res.json();
-    setImageLinks(urls);
-  }
-  fetchImages();
-}, []);
-
+    async function fetchMedia() {
+      const res = await fetch(`${BUCKET_URL}/data/${jsonPath}`);
+      const data = await res.json();
+      
+      // Handle both "slides" and "videos" keys
+      const items = data.slides || data.videos || [];
+      const urls = items.map((path) => `${BUCKET_URL}/${path}`);
+      
+      setMediaLinks(urls);
+    }
+    fetchMedia();
+  }, [jsonPath]);
 
   const sliderSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,   // show 1 slide at a time
-  slidesToScroll: 1,
-  adaptiveHeight: true,
-  arrows: true,
-};
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    arrows: true,
+  };
+  
   return (
     <div className={styles.slideshowcontainer}>
       <Slider {...sliderSettings}>
-        {imageLinks.map((src, index) => (
+        {mediaLinks.map((src, index) => (
           <div key={index}>
-            <img src={src} alt={`Slide ${index}`} className={styles.slideimage} />
+            {type === 'image' ? (
+              <img
+                src={src}
+                alt={`Slide ${index + 1}`}
+                className={styles.slideimage}
+              />
+            ) : (
+              <video
+                src={src}
+                className={styles.slidevideo}
+                controls
+                controlsList="nodownload"
+              />
+            )}
           </div>
         ))}
       </Slider>
