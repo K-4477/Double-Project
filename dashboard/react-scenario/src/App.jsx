@@ -6,6 +6,7 @@ import Products from './pages/Products'
 import Orders from './pages/Orders'
 import Settings from './pages/Settings'
 import { useTheme } from './context/ThemeContext'
+import styles from './css/Layout.module.css'
 
 export default function App() {
   const { darkMode } = useTheme()
@@ -19,7 +20,7 @@ export default function App() {
       }}>
         <Sidebar />
         <Navbar />
-        <main style={{ marginLeft: '240px', paddingTop: '64px', padding: '80px 32px 32px 272px' }}>
+        <main className={styles.main}>
           <Routes>
             <Route path="/" element={<Overview />} />
             <Route path="/products" element={<Products />} />

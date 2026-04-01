@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
+import styles from '../css/Layout.module.css'
 
 const links = [
   { to: '/', label: 'Overview', icon: '📊' },
@@ -12,34 +13,19 @@ export default function Sidebar() {
   const { darkMode } = useTheme()
 
   return (
-    <aside style={{
-      height: '100vh',
-      width: '240px',
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      padding: '24px',
+    <aside className={styles.sidebar} style={{
       backgroundColor: darkMode ? '#111827' : '#ffffff',
       color: darkMode ? '#ffffff' : '#1f2937',
-      boxShadow: '2px 0 5px rgba(0,0,0,0.1)',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '8px'
     }}>
-      <h1 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '24px' }}>🛍️ ShopDash</h1>
-      <nav style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <h1 className={styles.sidebarTitle}>🛍️ ShopDash</h1>
+      <nav className={styles.nav}>
         {links.map(link => (
           <NavLink
             key={link.to}
             to={link.to}
             end
+            className={styles.navLink}
             style={({ isActive }) => ({
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
-              padding: '12px 16px',
-              borderRadius: '8px',
-              textDecoration: 'none',
               backgroundColor: isActive ? '#2563eb' : 'transparent',
               color: isActive ? '#ffffff' : darkMode ? '#ffffff' : '#1f2937',
             })}
