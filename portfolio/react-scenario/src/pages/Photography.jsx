@@ -1,6 +1,5 @@
 import styles from '../css/Photography.module.css';
 import Slideshow from '../components/slideshow.jsx';
-import MediaGallery from './MediaGallery.jsx';
 
 
 const Photography = () => {

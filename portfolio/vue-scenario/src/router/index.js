@@ -2,7 +2,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Hero from '../pages/Hero.vue';
 import Photography from '../pages/Photography.vue';
-import MediaGallery from '../pages/MediaGallery.vue';
 import Videography from '../pages/Videography.vue';
 import Enquiries from '../pages/Enquries.vue';
 
@@ -14,11 +13,6 @@ const routes = [
   {
     path: '/photography',
     component: Photography
-  },
-  
-  {
-    path: '/gallery',
-    component: MediaGallery
   },
   {
     path:'/videography',

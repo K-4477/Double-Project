@@ -3,7 +3,6 @@
  <script setup>
   import camerahold from '/src/camerahold.jpg'
   import Videosun from '/src/Videosun.jpg'
-  import MediaGallery from './MediaGallery.vue'
   import styles from '../css/hero.module.css'
 </script>
 
