@@ -8,7 +8,7 @@
       </section>
     
       <div :class = "styles.Slideshow">
-        <Slideshow  />
+        <Slideshow  jsonPath="slideshow.json" type="image"/>
       </div>
       
       <div :class = "styles.photogallery">

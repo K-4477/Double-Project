@@ -15,6 +15,14 @@
 
       <section>
         <p :class="styles.roles">Freelance Photographer & Videographer</p>
+        
+        <div :class="styles.imgWrapper">
+          <img
+            src="https://images.unsplash.com/photo-1606115915090-be18fea23ec7?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8anBlZ3xlbnwwfHwwfHx8MA%3D%3D"
+            alt="camera"
+            :class="styles.heroImg"
+          />
+        </div>
 
         <div :class="styles.redirects">
           <div :class="styles.Predirect">
